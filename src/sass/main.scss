@@ -1,0 +1,55 @@
+@import "abstracts/functions";
+@import "abstracts/mixin";
+@import "abstracts/variables";
+
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "component/header";
+@import "component/nav";
+@import "component/footer";
+@import "component/loader";
+@import "component/originals";
+@import "component/homepageHead";
+@import "component/content";
+@import "component/streamany";
+@import "component/movcollection";
+@import "component/accordian";
+@import "component/box";
+@import "component/email";
+@import "component/footer";
+
+@import "component/moviescoll";
+
+@import "component/trailers";
+
+@import "component/signup";
+@import "component/hero";
+
+@import "component/login";
+
+@import "component/watchDash";
+
+@import "component/watchmov";
+
+@import "component/info";
+
+@import "component/avatar";
+
+@import "component/continue";
+
+@import "layout/footer";
+@import "layout/nav";
+
+@import "component/headermain";
+
+@import "pages/homepage";
+
+@import "component/picks";
+@import "component/genreSec";
+
+@import "component/watchtv";
+
+@import "component/moreInfo";
