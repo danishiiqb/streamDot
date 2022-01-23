@@ -1,0 +1,26 @@
+.accordian {
+  grid-column: full-start/full-end;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+
+  &__bx {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.img {
+  position: absolute;
+  left: -10.9rem;
+  top: 57%;
+  height: 46vw;
+  transform: translate(0, -50%);
+  @media only screen and (max-width: $bp-mid) {
+    left: -8rem;
+  }
+  @media only screen and (max-width: $bp-largest) {
+    left: -9rem;
+  }
+}
+.hello {
+}
