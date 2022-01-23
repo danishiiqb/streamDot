@@ -1,0 +1,226 @@
+.header {
+  grid-column: full-start/full-end;
+  padding: 0 4.5rem;
+  position: relative;
+
+  @media only screen and (max-width: $bp-sm-3) {
+    padding: 0 2rem;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #050314 12%, rgba(255, 255, 255, 0%) 81%);
+    @media only screen and (max-width: $bp-sm-2) {
+      background: linear-gradient(
+        0deg,
+        #050314 27%,
+        rgba(255, 255, 255, 0%) 81%
+      );
+    }
+
+    mix-blend-mode: multiply;
+    z-index: 5;
+    top: 0;
+    left: 0;
+  }
+
+  &__poster-block {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 75.3%;
+    position: relative;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    column-gap: 1.4rem;
+    @media only screen and (max-width: $bp-sm-3) {
+      column-gap: 1rem;
+      top: 50%;
+    }
+    @media only screen and (max-width: $bp-sm-2) {
+      // height: 58.9%;
+    }
+  }
+
+  &__poster {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.3);
+    backface-visibility: hidden;
+  }
+  &__poster--0 {
+    object-position: 76%;
+    @media only screen and (max-width: $bp-sm-3) {
+      object-position: 72%;
+    }
+  }
+  &__poster-box--3,
+  &__poster-box--0 {
+    overflow: hidden;
+  }
+  &__poster-box--2 {
+    overflow: hidden;
+  }
+
+  &__poster--3 {
+    height: 134%;
+    object-position: 50% -18.6rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      object-position: 48% -16.6rem;
+      height: 120%;
+    }
+    @media only screen and (max-width: $bp-sm-3) {
+      object-position: 47.98% -14.6rem;
+      height: 114%;
+    }
+  }
+  &__poster-box {
+    border-radius: 0.3rem;
+    width: 0;
+    transform: translateY(18rem);
+    overflow: hidden;
+  }
+  &__poster-box--1,
+  &__poster-box--3,
+  &__poster-box--5 {
+    position: relative;
+    bottom: 4.8rem;
+  }
+  &__poster--1 {
+    @media only screen and (max-width: $bp-mid) {
+      object-position: 54%;
+    }
+    @media only screen and (max-width: $bp-sm-3) {
+      object-position: 55%;
+    }
+  }
+  &__poster--5 {
+    object-position: 50%;
+    @media only screen and (max-width: $bp-mid) {
+      object-position: 48%;
+    }
+  }
+  &__poster--4 {
+    object-position: 50.8%;
+
+    @media only screen and (max-width: $bp-largest) {
+      object-position: 45.7%;
+    }
+
+    @media only screen and (max-width: $bp-sm-3) {
+      object-position: 44.89%;
+    }
+  }
+  &__poster--2 {
+    object-position: 56.7% -15.2rem;
+    height: 124%;
+    @media only screen and (max-width: $bp-largest) {
+      object-position: 54.7% -17.2rem;
+    }
+
+    @media only screen and (max-width: $bp-sm-3) {
+      object-position: 53.9% -29.9rem;
+    }
+  }
+
+  &__title-box {
+    position: absolute;
+    z-index: 120;
+    top: 48.7%;
+    left: 50%;
+    @media only screen and (max-width: $bp-sm-3) {
+      top: 46.7%;
+    }
+    transform: translate(-50%, -48.7%);
+    text-align: center;
+    width: 100%;
+  }
+  &__heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 7.4rem;
+
+    text-shadow: 0 0 2.5rem $color-page;
+
+    span {
+      display: inline-block;
+      transform: translateY(10rem);
+      opacity: 0;
+    }
+  }
+
+  &__para {
+    font-size: 1.56rem;
+    font-weight: 300;
+    margin: 0 auto;
+    line-height: 1.4;
+    margin-top: -0.8rem;
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  &__cover {
+    overflow: hidden;
+  }
+  &__link {
+    color: white;
+    text-decoration: none;
+  }
+  &__cta {
+    font-weight: 800;
+    font-size: 1.78rem;
+    padding: 1.4rem 2.6rem;
+    color: white;
+    background-color: $color-sec-1;
+    transform: translateY(4rem);
+    opacity: 0;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.7rem $color-sec-1;
+
+    cursor: pointer;
+    text-transform: capitalize;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    visibility: hidden;
+    margin-top: 1.7rem;
+
+    &--1 {
+      visibility: initial;
+      opacity: 1;
+    }
+    transition: width 0.1s ease-in, box-shadow 0.2s ease-in;
+    &::after {
+      content: '';
+      background-image: url('../../images/popcorn.svg');
+      width: 3rem;
+      height: 3rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 0.9rem;
+      transform: translateX(3rem) rotateZ(2deg);
+      visibility: hidden;
+      transition: all 0.2s ease;
+      opacity: 0;
+    }
+    &:hover {
+      box-shadow: 0 0rem 1.4rem $color-sec-1;
+      width: 19rem;
+    }
+    &:hover::after {
+      visibility: initial;
+      transform: translateX(0rem) rotateZ(7deg);
+      opacity: 1;
+    }
+    &:active {
+      box-shadow: 0 0.2rem 0.9rem $color-sec-1;
+    }
+  }
+}
+.hello {
+}
