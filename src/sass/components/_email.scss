@@ -1,0 +1,55 @@
+.email {
+  grid-column: full-start / full-end;
+  text-align: center;
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__frm {
+    width: 45%;
+    margin: 0 auto;
+    display: flex;
+  }
+  &__inp {
+    font-size: 2rem;
+    outline: none;
+    font-family: inherit;
+
+    &::placeholder {
+      color: #00000083;
+    }
+    border: none;
+    flex: 2;
+    padding: 1.2rem 0.7rem;
+    transition: all 0.4s ease-in-out;
+    border-radius: 0.3rem;
+    &:focus {
+      box-shadow: 0 0 2rem $color-sec-1;
+      outline: none;
+    }
+  }
+  button {
+    font-weight: 800;
+    font-size: 1.94rem;
+
+    padding: 1.4rem 2.6rem;
+    color: white;
+    background-color: $color-sec-1;
+    flex: 0.6;
+    @media only screen and (max-width: $bp-mid) {
+      align-self: stretch;
+      font-size: 1.2rem;
+    }
+    align-self: stretch;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.7rem $color-sec-1;
+    margin-left: -0.3rem;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+}
+.hello {
+}
