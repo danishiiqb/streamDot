@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 57%;
+  }
+  @media only screen and (max-width: $bp-mid) {
+    font-size: 51%;
+  }
+  @media only screen and (max-width: $bp-mid-2) {
+    font-size: 46%;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 40%;
+  }
+  @media only screen and (max-width: $bp-sm-2) {
+    font-size: 32%;
+  }
+  @media only screen and (max-width: $bp-sm-3) {
+    font-size: 27%;
+  }
+  @media only screen and (max-width: $bp-sm-3) {
+    font-size: 24.4%;
+  }
+  @media only screen and (max-width: $bp-sm-4) {
+    font-size: 20%;
+  }
+  @media only screen and (min-width: 1900px) {
+    font-size: 90%;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+  &::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+  }
+}
+
+.container {
+  display: grid;
+
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  grid-template-columns:
+    [full-start] 4.5rem [center-start]
+    repeat(12, [col-start] minmax(1rem, 1fr) [col-end])
+    [center-end]
+    4.5rem [full-end];
+
+  grid-template-rows: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: $color-page;
+
+  @media only screen and (max-width: $bp-sm-3) {
+    grid-template-columns:
+      [full-start] 2rem [center-start] repeat(
+        12,
+        [col-start] minmax(min-content, 1fr) [col-end]
+      )
+      [center-end]
+      2rem [full-end];
+  }
+
+  @media only screen and (max-width: $bp-sm-4) {
+    grid-template-rows: 78vh;
+  }
+}
