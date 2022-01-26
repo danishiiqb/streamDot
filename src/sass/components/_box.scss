@@ -1,0 +1,48 @@
+.box {
+  background: linear-gradient(211deg, #411fd1 35%, #050314 112%);
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    text-transform: capitalize;
+    font-size: 2rem;
+  }
+  &__btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-page;
+    }
+  }
+  &__para {
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    opacity: 0;
+  }
+}
+.add {
+  animation: slidedown 0.17s ease-in-out forwards;
+}
+@keyframes slidedown {
+  100% {
+    opacity: 1;
+  }
+}
+.hello {
+}
