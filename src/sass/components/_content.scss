@@ -1,0 +1,57 @@
+.content {
+  grid-column: full-start/full-end;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  opacity: 0;
+  &__bx {
+    display: flex;
+    background: linear-gradient(
+      250deg,
+      rgba(65, 31, 209, 1) 0%,
+      rgba(5, 3, 20, 1) 100%
+    );
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 0.7rem $color-sec-1;
+    width: 60%;
+    margin: 0 auto;
+  }
+  &__img-bx {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+    position: relative;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $color-sec-2;
+      position: absolute;
+      top: 0;
+      opacity: 0.4;
+      left: 0;
+    }
+  }
+  &__title {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -0.9rem;
+    text-shadow: 0 0.1rem 0.7rem $color-page;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.7rem;
+    }
+    font-size: 2.5rem;
+    left: 0;
+    z-index: 66;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.hello {
+}
