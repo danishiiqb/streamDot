@@ -1,0 +1,66 @@
+.movcollection {
+  grid-column: full-start/full-end;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &__bx {
+    background-color: $color-page;
+    width: 510rem;
+  }
+  &__upper {
+    margin-bottom: 3rem;
+    animation: slide 34s linear infinite;
+  }
+  &__down {
+    animation: slide2 75s linear infinite;
+  }
+  &__upper,
+  &__down {
+    display: flex;
+  }
+  &__img-bx {
+    box-shadow: 0 0 0.7rem $color-sec-1;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+    width: 100%;
+    align-self: stretch;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  99.99% {
+    transform: translateX(-370rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  99.99% {
+    transform: translateX(-370rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+.hello {
+}
