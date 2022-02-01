@@ -1,0 +1,133 @@
+.moreInfo {
+  grid-column: center-start/center-end;
+  position: relative;
+  margin-top: 4rem;
+
+  &__epbx {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, (minmax(30rem, 1fr)));
+    grid-auto-rows: 19rem;
+    column-gap: 1.9rem;
+    row-gap: 1.9rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.26s ease-in;
+      backface-visibility: hidden;
+    }
+  }
+  &__seasons-bx {
+    top: 0;
+    left: 0;
+    border: 2px solid $color-sec-1;
+    border-radius: 0.3rem;
+    background-color: $color-page;
+    height: 3rem;
+    display: inline-flex;
+    flex-direction: column;
+    transition: height 0.12s ease-in;
+    padding: 0.1rem 0.99rem;
+    cursor: pointer;
+    border: 1.8px solid $color-sec-1;
+    position: absolute;
+    z-index: 20;
+    svg {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+
+  &__bx-2 {
+    display: flex;
+    align-items: center;
+  }
+  &__drop {
+    opacity: 0;
+  }
+  &__txt {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      color: $color-sec-1;
+    }
+    &:not(:last-child) {
+      border-bottom: 1.8px solid $color-sec-1;
+    }
+  }
+  &__selected {
+    border-bottom: none !important;
+    &:hover {
+      color: white;
+    }
+  }
+}
+.max {
+  height: auto;
+  .moreInfo__drop {
+    opacity: 1;
+    animation: fade 0.2s ease-in forwards;
+  }
+}
+.ep {
+  &__svg {
+    position: absolute;
+    z-index: 5555;
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__inf-bx {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    background-color: $color-page;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: #050314c2;
+    height: 22%;
+    transition: all 0.26s ease-in;
+  }
+  &__bx {
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    box-shadow: 0 0 0.7rem $color-sec-1;
+    &:hover {
+      img {
+        transform: scale(1.15);
+      }
+      .ep__inf-bx {
+        height: 23.5%;
+      }
+    }
+  }
+  &__date {
+    font-weight: inherit;
+    font-size: 1rem;
+    margin-top: -0.2rem;
+  }
+  &__title-bx {
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    span {
+      margin: 0 0.2rem;
+    }
+  }
+}
