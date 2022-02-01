@@ -1,0 +1,57 @@
+.genresec {
+  grid-column: center-start/center-end;
+  margin-top: 4rem;
+  &__bx {
+    margin-top: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+.genre {
+  position: relative;
+  box-shadow: 0 0 0.7rem $color-sec-1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    .genre__img-bx {
+      transform: scale(1.08);
+    }
+  }
+  &__img-bx {
+    width: 100%;
+    height: 16rem;
+    backface-visibility: hidden;
+    transition: transform 0.3s ease-in;
+    position: relative;
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #08003b63;
+    }
+  }
+  h4 {
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.hello {
+}
