@@ -1,0 +1,176 @@
+.watchDash {
+  grid-column: full-start/full-end;
+  padding: 0 4.5rem;
+
+  &__bx {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    border: 4.5px solid $color-sec-1;
+    border-radius: 0.4rem;
+  }
+  &__box {
+    text-align: center;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__btns {
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 8rem;
+    button:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  &__nm {
+    display: block;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  &__box-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+    grid-auto-rows: 16rem;
+    column-gap: 2rem;
+    row-gap: 6rem;
+    margin-top: 3rem;
+    justify-content: center;
+  }
+  &__manage {
+    font-size: 1.23rem;
+    margin-top: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+}
+.mdl {
+  position: fixed;
+  background-color: $color-sec-1;
+  width: 50%;
+  z-index: 66;
+  top: 50%;
+  left: 50%;
+  z-index: 777;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 0.5rem;
+
+  &__box {
+    width: 94%;
+    margin: 0 auto;
+    margin-bottom: 1.4rem;
+    text-align: left;
+  }
+
+  h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin: 1.4rem 0;
+    text-align: center;
+  }
+  &__btn {
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: transparent;
+    border: none;
+    top: 3px;
+    cursor: pointer;
+
+    right: 4px;
+    svg {
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+    }
+  }
+  h4 {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  &__inp {
+    width: 100%;
+    border: 2.8px solid $color-page;
+    background-color: $color-page;
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+    padding: 1.2rem;
+    font-size: 1.58rem;
+    font-weight: 300;
+
+    border-radius: 0.7rem;
+    color: white;
+    transition: all 0.6s ease-out;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.698);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0.67rem $color-sec-1;
+    }
+  }
+}
+.error {
+  font-size: 0.9rem;
+  display: inline-block;
+  color: red;
+}
+.btn-dis {
+  opacity: 0.8;
+  cursor: initial;
+}
+.click {
+  border: 4.5px solid red;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hello {
+}
