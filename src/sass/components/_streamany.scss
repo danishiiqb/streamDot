@@ -1,0 +1,63 @@
+.streamAny {
+  grid-column: full-start/full-end;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  &__bx {
+    &--0 {
+      img {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &--1 {
+      position: absolute;
+      left: 9rem;
+      width: 40%;
+      bottom: -15.8rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__svgbx {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 14rem;
+  }
+  &__sec-bx {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    list-style: none;
+    text-align: left;
+    font-weight: 800;
+    margin-left: 2.4rem;
+    font-size: 1.6rem;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1.4rem;
+      }
+    }
+  }
+  &__svg {
+    width: 25rem;
+    height: 18rem;
+    @media only screen and (max-width: $bp-mid) {
+      width: 16rem;
+      height: 16rem;
+    }
+    &--1 {
+      width: 15rem;
+      @media only screen and (max-width: $bp-mid) {
+        width: 10rem;
+      }
+    }
+  }
+  &__boxImg {
+    position: relative;
+  }
+}
