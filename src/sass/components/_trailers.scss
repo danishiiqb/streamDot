@@ -1,0 +1,120 @@
+.trailer {
+  grid-column: center-start/center-end;
+  margin-top: 6rem;
+  &__list {
+    position: relative;
+    margin-top: 1.3rem;
+  }
+  &__bx {
+    display: inline-flex;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &__btn {
+    position: absolute;
+    height: 105%;
+    top: -1rem;
+    width: 4.5rem;
+    background-color: #05031400;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 66666;
+    &:hover {
+      background-color: #050314b9;
+      backdrop-filter: blur(12px);
+    }
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+    &--prev {
+      display: none;
+    }
+    svg {
+      transition: opacity 0.2s ease-in-out;
+      opacity: 0;
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+    &--nxt {
+      svg {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+  }
+}
+.block {
+  cursor: pointer;
+
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  margin-right: 1.5rem;
+  box-shadow: 0 0 0.7rem $color-sec-1;
+  overflow: hidden;
+  position: relative;
+  height: 15rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.tr-show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.overlay-bl {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: #401fd194;
+  animation: fade 0.5s ease-in-out forwards;
+  .sv {
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+  }
+}
+.add-to {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 80%;
+  height: 3rem;
+  background-color: $color-page;
+  svg {
+    width: 0.9rem;
+    margin-left: 0.7rem;
+    height: 0.9rem;
+  }
+  span {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-left: 0.4rem;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hello {
+}
