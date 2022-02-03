@@ -1,0 +1,128 @@
+.originals {
+  grid-column: full-start/full-end;
+  text-align: center;
+  position: relative;
+
+  z-index: 56;
+  opacity: 0;
+  &__box {
+    display: flex;
+    height: 55vw;
+  }
+  &__bx {
+    height: 20%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.9;
+  }
+  &__jk {
+    width: 100%;
+    position: absolute;
+    transition: all 0.6s ease-in-out;
+  }
+  &__provider {
+    flex: 1;
+    position: relative;
+    background-color: $color-page;
+    box-shadow: 0 0 0.7rem #411fd1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 777;
+    align-items: center;
+    svg {
+      width: 60%;
+      height: 100%;
+      opacity: 0.97;
+    }
+  }
+  &__series {
+    flex: 2;
+    background: linear-gradient(
+      250deg,
+      rgba(65, 31, 209, 1) 0%,
+      rgba(5, 3, 20, 1) 100%
+    );
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 4.5rem;
+    @media only screen and (max-width: $bp-sm-3) {
+      padding: 2rem;
+    }
+    grid-gap: 3rem;
+  }
+  &__series-poster {
+    width: 0%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+  }
+  &__series-box {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 0.7rem $color-page;
+    transition: all 0.4s ease-in-out;
+    backface-visibility: hidden;
+    position: relative;
+  }
+}
+.originals__series-poster.loaded {
+  animation: fadeiimg 0.24s ease-in forwards 0.43s;
+}
+.originals__series-box.show {
+  animation: showu 0.383s ease-in forwards 0.3s;
+}
+@keyframes fadeiimg {
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes showu {
+  0% {
+    transform: scale(1.005);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.originals__series-box.hide {
+  &::after {
+    width: 0.4%;
+    height: 100%;
+    background-color: #1e1066ab;
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+
+    left: 0;
+    animation: hide 1.3s ease infinite forwards 0.2s;
+  }
+}
+@keyframes hide {
+  100% {
+    width: 120%;
+    background-color: #1e106657;
+  }
+}
+.showh {
+  animation: backup 0.4s ease-out forwards;
+}
+@keyframes backup {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
