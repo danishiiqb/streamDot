@@ -1,55 +1,55 @@
-@import "abstracts/functions";
-@import "abstracts/mixin";
-@import "abstracts/variables";
+@import 'abstracts/functions';
+@import 'abstracts/mixin';
+@import 'abstracts/variables';
 
-@import "base/animation";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/animation';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import "component/header";
-@import "component/nav";
-@import "component/footer";
-@import "component/loader";
-@import "component/originals";
-@import "component/homepageHead";
-@import "component/content";
-@import "component/streamany";
-@import "component/movcollection";
-@import "component/accordian";
-@import "component/box";
-@import "component/email";
-@import "component/footer";
+@import 'components/header';
+@import 'components/nav';
+@import 'components/footer';
+@import 'components/loader';
+@import 'components/originals';
+@import 'components/homepageHead';
+@import 'components/content';
+@import 'components/streamany';
+@import 'components/movcollection';
+@import 'components/accordian';
+@import 'components/box';
+@import 'components/email';
+@import 'components/footer';
 
-@import "component/moviescoll";
+@import 'components/moviescoll';
 
-@import "component/trailers";
+@import 'components/trailers';
 
-@import "component/signup";
-@import "component/hero";
+@import 'components/signup';
+@import 'components/hero';
 
-@import "component/login";
+@import 'components/login';
 
-@import "component/watchDash";
+@import 'components/watchDash';
 
-@import "component/watchmov";
+@import 'components/watchmov';
 
-@import "component/info";
+@import 'components/info';
 
-@import "component/avatar";
+@import 'components/avatar';
 
-@import "component/continue";
+@import 'components/continue';
 
-@import "layout/footer";
-@import "layout/nav";
+@import 'layout/footer';
+@import 'layout/nav';
 
-@import "component/headermain";
+@import 'components/headermain';
 
-@import "pages/homepage";
+@import 'pages/homepage';
 
-@import "component/picks";
-@import "component/genreSec";
+@import 'components/picks';
+@import 'components/genreSec';
 
-@import "component/watchtv";
+@import 'components/watchtv';
 
-@import "component/moreInfo";
+@import 'components/moreInfo';
