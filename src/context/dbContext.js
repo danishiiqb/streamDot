@@ -6,7 +6,7 @@ function useDb() {
   return useContext(dbContext);
 }
 function DbContextProvider({ children }) {
-  const updateUerInf = async (uid, email, name, dob = 'Null', userName) => {
+  const updateUerInfo = async (uid, email, name, dob = 'Null', userName) => {
     let docId = uuidv4();
     return firestore
       .collection('users')
