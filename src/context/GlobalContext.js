@@ -8,7 +8,7 @@ const useGlobal = () => {
 };
 
 const GlobalCntxtProvider = ({ children }) => {
-  const loade = useRef(false);
+  const loader = useRef(false);
   const { getUserfromdb, updateUidDocs } = useDb();
   const [update, setUpdate] = useState(0);
   const [UserSelected, setUserSelected] = useState(
